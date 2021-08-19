@@ -1,0 +1,19 @@
+{
+  "authors": [
+    {
+      "author": "J. R. R. Tolkien",
+      "dob": "January 03, 1892",
+      "country": "England"
+    },
+    {
+      "author": "Mario Puzo",
+      "dob": "October 15, 1920",
+      "country": "USA"
+    },
+    {
+      "author": "Mark Winegardner",
+      "dob": "November 24, 1961",
+      "country": "USA"
+    }
+  ]
+}

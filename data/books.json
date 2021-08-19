@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "name": "The Goodfather - part1",
+      "year": 1969,
+      "ISBN": "0-399-10342-2",
+      "summary": "The Corleone family fights a mob war with the other four Mafia families in New York in the years after World War II. The war sees the ascent of Don Vito Corleone's youngest son Michael, who previously held his family's crime enterprise in low regard. With Vito retired at the conclusion of the war, Michael orchestrates a plan to relocate the family's power base to Las Vegas while eliminating its remaining rivals in New York",
+      "author": "Mario Puzo"
+    },
+    {
+      "name": "The Sicilian - part2",
+      "year": 1984,
+      "ISBN": "0-671-43564-7",
+      "summary": "Michael Corleone, about to return from exile in Sicily at the end of the Five Families War, is instructed by his father to help Sicilian bandit Salvatore Giuliano escape to America with him. Giuliano's rise from an ordinary Sicilian peasant to a power in Sicily rivaling even the Mafia is chronicled. However, Giuliano makes enemies in both law enforcement and organized crime circles, and his quest to free Sicily from oppression is ultimately unsuccessful.",
+      "author": "Mario Puzo"
+    },
+    {
+      "name": "The Godfather Returns - part3",
+      "year": 2004,
+      "ISBN": "1-4000-6101-6",
+      "summary": "The story picks up immediately after the end of the first novel. The events of the film The Godfather Part II take place within the time frame of this novel, but are only mentioned in the background. Many of Puzo's characters are expanded upon, especially Fredo Corleone, consigliere Tom Hagen, and Johnny Fontane, and new characters like Nick Geraci, Mickey Shea, Danny Shea, and Francesca Corleone are introduced. The other half of the novel goes deeper into Michael's role as Don and his dream of legitimizing the Corleone family. The novel expands on Michael's service in World War II as well as his brother Fredo's secret life. The novel shows how Sonny, Fredo and Tom Hagen join the family business, as well as the deaths of Peter Clemenza and Salvatore Tessio.",
+      "author": "Mark Winegardner"
+    },
+    {
+      "name": "The Fellowship of the Ring",
+      "year": 1954,
+      "ISBN": "9780395647394",
+      "summary": "The prologue explains that the book is 'largely concerned with hobbits', telling of their origins in a migration from the east, their habits such as smoking 'pipe-weed', and of how their homeland the Shire is organised. It explains how the narrative follows on from The Hobbit, in which the hobbit Bilbo Baggins finds the One Ring, which had been in the possession of Gollum.",
+      "author": "J. R. R. Tolkien"
+    },
+    {
+      "name": "The Two Towers",
+      "year": 1954,
+      "ISBN": "9780007203550",
+      "summary": "A party of large Orcs, Uruk-hai, sent by Saruman, and other Orcs sent by Sauron and led by Grishnákh, attack the Fellowship. Boromir tries to protect Merry and Pippin from the Orcs, but they kill him and capture the two hobbits. Aragorn, Gimli and Legolas decide to pursue the Orcs taking Merry and Pippin to Saruman. In the kingdom of Rohan, the Orcs are killed by Riders of Rohan, led by Éomer. Merry and Pippin escape into Fangorn Forest, where they are befriended by Treebeard, the oldest of the tree-like Ents. Aragorn, Gimli and Legolas track the hobbits to Fangorn. There they unexpectedly meet Gandalf",
+      "author": "J. R. R. Tolkien"
+    },
+    {
+      "name": "The Return of the King",
+      "year": 1955,
+      "ISBN": "9780618002245",
+      "summary": "Sauron sends a great army against Gondor. Gandalf arrives at Minas Tirith to warn Denethor of the attack, while Théoden musters the Rohirrim to ride to Gondor's aid. Minas Tirith is besieged; the Lord of the Nazgûl uses a battering ram and the power of his Ring to destroy the city's gates. Denethor, deceived by Sauron, falls into despair. He burns himself alive on a pyre; Pippin and Gandalf rescue his son Faramir from the same fate.",
+      "author": "J. R. R. Tolkien"
+    }
+  ]
+}

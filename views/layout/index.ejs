@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" />
+  </head>
+  <body>
+    <header><h1><%= siteName %></h1></header>
+    <aside><%- include(`./partials/navigation`)%></aside>
+    <%- include(`../pages/${template}`)%>
+    <footer></footer>
+    <%- include(`./partials/scripts`)%>
+  </body>
+</html>

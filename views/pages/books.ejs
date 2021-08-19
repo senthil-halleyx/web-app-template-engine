@@ -1,0 +1,7 @@
+<main><%= pageTitle %></main>
+
+<% books.forEach((book)=>{%>
+<div>
+  <a href="books/<%=book.name%>"><%=book.name%></a>
+</div>
+<%}) %>

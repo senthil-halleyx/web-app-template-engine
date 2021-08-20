@@ -5,6 +5,7 @@ const util = require("util");
  * We want to use async/await with fs.readFile - util.promisfy gives us that
  */
 const readFile = util.promisify(fs.readFile);
+const writeFile = util.promisify(fs.writeFile);
 
 /**
  * Logic for fetching books information
@@ -16,6 +17,15 @@ class BookService {
    */
   constructor(datafile) {
     this.datafile = datafile;
+  }
+
+  /**
+   * Add a new book
+   */
+  async addBook(name, year, ISBN, author, summary) {
+    const data = (await this.getData()) || [];
+    data.unshift({ name, year, ISBN, author, summary });
+    return writeFile(this.datafile, JSON.stringify(data));
   }
 
   /**
@@ -100,6 +110,14 @@ class BookService {
   async getData() {
     const data = await readFile(this.datafile, "utf8");
     return JSON.parse(data).books;
+  }
+  /**
+   * Fetches books data from the JSON file provided to the constructor
+   */
+  async getRawData() {
+    const data = await readFile(this.datafile, "utf8");
+    if (!data) return [];
+    return JSON.parse(data);
   }
 }
 

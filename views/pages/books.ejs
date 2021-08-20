@@ -1,7 +1,79 @@
-<main><%= pageTitle %></main>
-
-<% books.forEach((book)=>{%>
-<div>
-  <a href="books/<%=book.name%>"><%=book.name%></a>
-</div>
-<%}) %>
+<main>
+  <h3><%= pageTitle %></h3>
+  <div class="book">
+    <% books.forEach((book)=>{%>
+    <div>
+      <a href="books/<%=book.name%>"><%=book.name%></a>
+    </div>
+    <%}) %>
+  </div>
+  <div class="book">
+    <h3>Adding a new book</h3>
+    <% if(locals.errors){%>
+    <div>
+      <% errors.forEach((error)=>{%>
+      <ul>
+        <li><%= error.msg %></li>
+      </ul>
+      <%})%>
+    </div>
+    <%}%>
+    <form method="post" action="/books">
+      <section>
+        <div>
+          <label for="book-name">Name</label><br />
+          <input
+            type="text"
+            id="book-name"
+            name="name"
+            placeholder="Enter the book name"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="book-year">Published year</label>
+          <br />
+          <input type="text" id="book-year" name="year" placeholder="Year" />
+        </div>
+        <br />
+        <div>
+          <label for="book-ISBN">ISBN</label><br />
+          <input type="text" id="book-ISBN" name="ISBN" placeholder="ISBN" />
+        </div>
+        <br />
+        <div>
+          <label for="book-author">Author</label><br />
+          <input
+            type="text"
+            id="book-author"
+            name="author"
+            placeholder="Author"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="book-author-email">Email</label><br />
+          <input
+            type="text"
+            id="book-author-email"
+            name="email"
+            placeholder="Author email"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="book-summary">Summary</label><br />
+          <input
+            type="text"
+            id="book-summary"
+            name="summary"
+            placeholder="Summary"
+          />
+        </div>
+        <br />
+        <button type="submit">Add new book</button>
+        <br /><br />
+      </section>
+    </form>
+  </div>
+</main>

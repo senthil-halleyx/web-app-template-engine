@@ -10,6 +10,10 @@ module.exports = (params) => {
     try {
       const books = await bookService.getBooks();
       const errors = req.session.book ? req.session.book.errors : false;
+      const successMessage = req.session.book
+        ? req.session.book.message
+        : false;
+
       req.session.book = {};
 
       return res.render("layout", {
@@ -17,6 +21,7 @@ module.exports = (params) => {
         template: "books",
         books,
         errors,
+        successMessage,
       });
     } catch (error) {
       next(error);
@@ -59,15 +64,17 @@ module.exports = (params) => {
         .isAlphanumeric()
         .withMessage("Valid year is required"),
     ],
-    (req, res, next) => {
+    async (req, res, next) => {
       try {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
           req.session.book = { errors: errors.array() };
           return res.redirect("/books");
         }
-        // console.log(req.body);
-        return res.send("A new book is added");
+        const { name, year, ISBN, author, summary } = req.body;
+        await bookService.addBook(name, year, ISBN, author, summary);
+        req.session.book = { message: "A new books is successfully added" };
+        return res.redirect("/books");
       } catch (error) {
         next(error);
       }

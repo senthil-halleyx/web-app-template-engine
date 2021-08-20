@@ -1,5 +1,6 @@
 <main>
   <h3><%= pageTitle %></h3>
+
   <div class="book">
     <% books.forEach((book)=>{%>
     <div>
@@ -7,6 +8,7 @@
     </div>
     <%}) %>
   </div>
+
   <div class="book">
     <h3>Adding a new book</h3>
     <% if(locals.errors){%>
@@ -15,8 +17,10 @@
       <ul>
         <li><%= error.msg %></li>
       </ul>
-      <%})%>
+      <%}) %>
     </div>
+    <%} else if (locals.successMessage) {%>
+    <div><%= successMessage %></div>
     <%}%>
     <form method="post" action="/books">
       <section>

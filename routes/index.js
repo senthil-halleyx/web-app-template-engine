@@ -4,19 +4,20 @@ const authorsRoute = require("./authors");
 const booksRoute = require("./books");
 
 module.exports = (params) => {
-  router.get("/", (req, res) => {
-    if (!req.session.visitcount) {
-      req.session.visitcount = 0;
-    }
-    req.session.visitcount++;
-    // res.render("./pages/index", {
-    //   pageTitle: `Welcome to the Node.js web app using template engine - ${req.session.visitcount}`,
-    // });
+  router.get("/", (req, res, next) => {
+    try {
+      if (!req.session.visitcount) {
+        req.session.visitcount = 0;
+      }
+      req.session.visitcount++;
 
-    res.render("layout", {
-      pageTitle: `Welcome to the Node.js web app using template engine - ${req.session.visitcount}`,
-      template: "index",
-    });
+      return res.render("layout", {
+        pageTitle: `Welcome to the Node.js web app using template engine - ${req.session.visitcount}`,
+        template: "index",
+      });
+    } catch (error) {
+      next(error);
+    }
   });
   router.use("/authors", authorsRoute(params));
   router.use("/books", booksRoute(params));
